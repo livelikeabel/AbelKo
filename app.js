@@ -431,7 +431,7 @@
 
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', function () {
-      navigator.serviceWorker.register('/sw.js').catch(function () { /* 오프라인 등록 실패 무시 */ });
+      navigator.serviceWorker.register('./sw.js').catch(function () { /* 오프라인 등록 실패 무시 */ });
     });
   }
 })();

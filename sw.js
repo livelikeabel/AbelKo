@@ -4,14 +4,14 @@ var CACHE = 'fightcamp-diet-v1';
 var FONT_CACHE = 'fightcamp-fonts-v1';
 
 var PRECACHE = [
-  '/',
-  '/index.html',
-  '/style.css',
-  '/app.js',
-  '/manifest.webmanifest',
-  '/icons/icon-192.png',
-  '/icons/icon-512.png',
-  '/icons/apple-touch-icon.png'
+  './',
+  './index.html',
+  './style.css',
+  './app.js',
+  './manifest.webmanifest',
+  './icons/icon-192.png',
+  './icons/icon-512.png',
+  './icons/apple-touch-icon.png'
 ];
 
 self.addEventListener('install', function (e) {
@@ -66,7 +66,7 @@ self.addEventListener('fetch', function (e) {
   if (req.mode === 'navigate') {
     e.respondWith(
       staleWhileRevalidate(req, CACHE).then(function (res) {
-        return res || caches.match('/index.html');
+        return res || caches.match('./index.html');
       })
     );
     return;
