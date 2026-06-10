@@ -22,3 +22,25 @@ What i want
 8. 함수형으로 만드는 할 일 앱
 9. 메모이제이션
 
+---
+
+## FIGHT CAMP 식단 PWA 🥊
+
+복싱 파이트 캠프용 식단 관리 PWA (저장소 루트의 `index.html` / `app.js` / `sw.js`).
+오프라인 완전 동작, 홈 화면 설치 가능, 데이터는 `localStorage`에 저장됩니다.
+
+**로컬 실행:**
+
+```
+npx serve .
+```
+
+**Vercel 배포 (2줄):**
+
+```
+npm i -g vercel
+vercel deploy --prod
+```
+
+아이콘 재생성: `pip install pillow && python3 scripts/make-icons.py`
+
